@@ -23,12 +23,12 @@ The study covered core concepts in deep learning, including neural networks, con
 |---|---|---|---|
 | Week 1 | 1~3장 | PyTorch 기초/MLP | - |
 | Week 2 | 4~5장 | CNN | - |
-| Week 3 | 6장 | RNN/LSTM | Deep Residual Learning for Image Recognition |
-| Week 4 | 7장 | Transformer(Transfer Learning) | Deep Residual Learning for Image Recognition |
-| Week 5 | 8장 | 영상 처리 응용(ResNet/YOLO) | Attention is All You Need |
-| Week 6 | 9장 | 텍스트 처리 응용 및 LSTM 감성 분석기 심층 학습 | Attention is All You Need |
-| Week 7 | 10장 | 오디오 처리 응용(WaveNet) | YOLO: You Only Look Once |
-| Week 8 | 11장 | RL | YOLO: You Only Look Once |
+| Week 3 | 6장 | RNN/LSTM | Deep Residual Learning for Image Recognition(1) |
+| Week 4 | 7장 | Transformer(Transfer Learning) | Deep Residual Learning for Image Recognition(2) |
+| Week 5 | 8장 | 영상 처리 응용(ResNet/YOLO) | Attention is All You Need(1) |
+| Week 6 | 9장 | 텍스트 처리 응용 및 LSTM 감성 분석기 심층 학습 | Attention is All You Need(2) |
+| Week 7 | 10장 | 오디오 처리 응용(WaveNet) | YOLO: You Only Look Once(1) |
+| Week 8 | 11장 | RL | YOLO: You Only Look Once(2) |
 | Week 9 | 12장 | 모델 성능 최적화 및 배포 | - |
 | Week 10 | - | - | An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale |
 | Week 11 | - | - | ImageNet Classification with Deep Convolutional Neural Networks: AlexNet |
@@ -38,10 +38,16 @@ The study covered core concepts in deep learning, including neural networks, con
 
 ```text
 deep-learning-study/
-├── 01-neural-networks/
-├── 02-cnn/
-├── 03-rnn/
-├── 04-attention/
-├── 05-transformer/
-├── presentations/
+├── week1  # 교재 1~3장
+├── week2  # 교재 4~5장
+├── week3  # 교재 6장 & paper review
+├── week4  # 교재 7장 & paper review
+├── week5  # 교재 8장 & paper review
+├── week6  # 교재 9장 & paper review
+├── week7  # 교재 10장 & paper review
+├── week8  # 교재 11장 & paper review
+├── week9  # 교재 12장
+├── week10 # paper review & representation
+├── week11 # paper review & representation
+├── week12 # paper review & representation
 └── assets/
