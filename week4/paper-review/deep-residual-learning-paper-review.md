@@ -26,6 +26,9 @@
 - 잔차학습 구조: $H(x) - x$ 얻는 것이 목표.
 
 ![residual_connection_structure](images/residual_connection_structure.png)
+<p align="center">
+  <img src="images/residual_connection_structure.png" width="500">
+</p>
 
 - Residual Function: $F(x) = H(x) - x$ 최소화 하는 것 → (출력 - 입력) 차이 줄임.             $F(x) = 0 , H(x) = x$ 이 최적의 해 ⇒ $H(x)$를 $x$ 로 mapping 하는 것이 학습의 목표
 
