@@ -25,7 +25,6 @@
     - 추가되지 않은 레이어 → 더 얕은 모델에서 학습된 layer 사용
 - 잔차학습 구조: $H(x) - x$ 얻는 것이 목표.
 
-![residual_connection_structure](images/residual_connection_structure.png)
 <p align="center">
   <img src="images/residual_connection_structure.png" width="500">
 </p>
@@ -84,8 +83,9 @@ $y=F(x, {W_i}) + W_sx$
 
 - Downsampling을 수행한다면 stride가 2인 conv filter 사용한다 → 메인 경로에서 이미 이미지 크기 반으로 줄임. Shortcut ($x$) 의 크기도 반으로 줄여야 더할수있게됨
 
-![downsampling](images/downsampling.png)
-
+<p align="center">
+  <img src="images/downsampling.png" width="500">
+</p>
 * 왜 Pooling을 안쓰는지? 정보를 요약하는 방법까지도 모델이 스스로 학습하게 하기 위해서
 
 *  Downsampling: Max Pooling(가장 큰 숫자 빼고 다 버림) / Strided Convolution(가중치 이용해서 이 구역의 정보를 가장 잘 요약하는 값으로 계산, image 크기 줄이면서도, 어떤 정보를 남길지 파라미터 ($w$)가 직접 학습) 
