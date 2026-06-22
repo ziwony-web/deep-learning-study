@@ -81,7 +81,7 @@ $y=F(x, {W_i}) + W_sx$
 
 - Downsampling을 수행한다면 stride가 2인 conv filter 사용한다 → 메인 경로에서 이미 이미지 크기 반으로 줄임. Shortcut ($x$) 의 크기도 반으로 줄여야 더할수있게됨
 
-!image.png
+![downsampling](week4/paper-review/images/downsampling)png
 
 * 왜 Pooling을 안쓰는지? 정보를 요약하는 방법까지도 모델이 스스로 학습하게 하기 위해서
 
