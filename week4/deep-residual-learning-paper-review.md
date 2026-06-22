@@ -25,12 +25,11 @@
     - 추가되지 않은 레이어 → 더 얕은 모델에서 학습된 layer 사용
 - 잔차학습 구조: $H(x) - x$ 얻는 것이 목표.
 
-!image.png
+![residual_connection_structure](images/residual_connection_structure).png
 
 - Residual Function: $F(x) = H(x) - x$ 최소화 하는 것 → (출력 - 입력) 차이 줄임.             $F(x) = 0 , H(x) = x$ 이 최적의 해 ⇒ $H(x)$를 $x$ 로 mapping 하는 것이 학습의 목표
 
-*
- ResNet의 Shortcut Connection은 미분을 했을 때 항상 '1'이라는 상수를 남김 → 그래디언트가 소실되지 않고 입력층까지 직통으로 전달되게 함
+* ResNet의 Shortcut Connection은 미분을 했을 때 항상 '1'이라는 상수를 남김 → 그래디언트가 소실되지 않고 입력층까지 직통으로 전달되게 함
 
 기존 네트워크는 역전파 때 가중치들을 계속 곱하면서(chain rule) 내려오는데,  1보다 작은 수를 계속 곱하면 0이 되어버림
 
