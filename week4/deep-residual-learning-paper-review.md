@@ -1,4 +1,6 @@
-# Abstract
+# Deep Residual Learning for Image Recognition
+
+## Abstract
 
 - Residual learning framework → To ease the training of networks
 - 신경망을 깊게 쌓으면 성능이 좋아질줄 알았는데, 오히려 기울기 소실 문제 → Identity Mapping
@@ -14,7 +16,7 @@
 
 “복잡하게 요리해서 망칠 바에, 그냥 원재료를 내보내는게 낫다”
 
-# 1. Introduction
+## 1. Introduction
 
 - 깊은 모델에 더 많은 layer 추가? → train 오류 올라감
 - 심층 신경망 → 성능이 최고수준에 도달할 때 정확도 급격히 떨어짐 → degradation 문제 (Overfitting 문제가 아니라, 네트워크가 너무 깊어져서 학습 자체가 안되는 ‘퇴보’문제
@@ -37,7 +39,7 @@
 
 즉, 가중치 층에서 그래디언트가 소실되더라도, Shortcut 경로(Identity)가 '1'로 버티고 있어서 에러 신호가 입력층까지 살아서 도착! 
 
-# 2. Related Work
+## 2. Related Work
 
 1. **Resiual Representations**
     
@@ -58,20 +60,20 @@
     identity shortcuts → 닫히지 않고 모든 정보들 통과됨. 지속적으로 residual function 학습 가능
     
 
-# 3. Deep Residual Learning
+## 3. Deep Residual Learning
 
-## 3.1. Residual Learning
+### 3.1. Residual Learning
 
 - 실제로는 Identity Mapping이 최적일 가능성 낮음. but ResNet에서 제안하는 재구성방식 → 문제에 Pre-condition 추가하는 데 도움을 줌
 - Pre-conditioning으로 인해 Optimal function이 Zero Mapping 보다 Identity mapping에 더 가깝다면, solver가 Identity Mapping을 참조하여 작은 변화를 학습하는 것이 새로운 function을 학습하는 것보다 더 쉬울것
 
-## 3.2. Identity Mapping by Shortcuts
+### 3.2. Identity Mapping by Shortcuts
 
 $y=F(x, {W_i}) + W_sx$
 
 - $W_s$ : 차원을 매칭 시켜줄때만 사용(linear projection), 더하기 연산이 성립하려면, $F(x)$ 와 $x$의 행렬 크기가 같아야 한다.
 
-## 3.3. Network Architectures - ImageNet 용 2가지 모델
+### 3.3. Network Architectures - ImageNet 용 2가지 모델
 
 1. **Plain Network**: VGG Nets에서 영감 받음, Shortcut Connection X, 전통적인 방식의 깊은 신경망
 - 2가지 규칙 기반 설계
@@ -90,7 +92,7 @@ $y=F(x, {W_i}) + W_sx$
 - input, output 차원이 같다면? → 바로 Identity Shortcut 사용
 - Dimension이 증가했다면? → 1) Zero Padding 적용, 차원 키워줌 2) Projection Shortcut 사용 (1x1 conv)
 
-## 3.4. Implementation 모델 구현
+### 3.4. Implementation 모델 구현
 
 1. Shorter size가 [256, 480] 사이가 되도록 random하게 resize 수행
 2. horizontal flip 부분적 적용, per-pixel mean 빼줌
@@ -107,7 +109,7 @@ $y=F(x, {W_i}) + W_sx$
 
 → 이후 test 단계: 10-crop testing, multiple scale 적용, shorter side가 {224, 256, 384, 480, 640} 중 하나가 되도록 resize, 평균 score 산출
 
-## 4. Experiments
+### 4. Experiments
 
 4.1. Image Net Classification
 
