@@ -18,12 +18,10 @@
 
 ---
 
-## RNN 구조 이미지 삽입 예시
 
 이미지를 GitHub에 올릴 경우 다음과 같이 삽입할 수 있다.
 
 ```markdown
-![RNN Structure](images/rnn_structure.png)
 ```
 
 이미지 파일을 `images` 폴더에 넣고 파일명을 맞춰주면 된다.
@@ -128,10 +126,8 @@ RNN은 오래된 정보를 기억하는 데 한계가 있지만, LSTM은 중요�
 
 ---
 
-## LSTM 구조 이미지 삽입 예시
 
 ```markdown
-![LSTM Structure](images/lstm_structure.png)
 ```
 
 ---
@@ -329,9 +325,7 @@ GRU는 LSTM보다 구조가 간단하고 학습 속도가 빠르다.
 순환 신경망 모델은 데이터의 길이, 복잡도, 계산 자원, 성능 목표에 따라 선택할 수 있다.
 
 ```markdown
-![RNN Model Selection Guide 1](images/rnn_model_selection_guide_1.png)
 
-![RNN Model Selection Guide 2](images/rnn_model_selection_guide_2.png)
 ```
 
 ---
@@ -656,3 +650,4 @@ y = [100]
 * PyTorch에서는 `nn.RNN`, `nn.LSTM`, `nn.GRU`를 사용하여 순환 신경망을 구현할 수 있다.
 * 시계열 데이터 전처리에서는 정규화, Sliding Window 생성, 시간 순서 기반 데이터 분할이 중요하다.
 * Sliding Window에서 샘플 수는 `N - W - H + 1`로 계산할 수 있다.
+

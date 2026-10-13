@@ -782,14 +782,11 @@ Student Model은 Teacher Model의 출력 분포를 따라 학습하면서 작은
 
 ---
 
-## 이미지 삽입 예시
 
 이미지를 GitHub에 올릴 경우 다음과 같이 삽입할 수 있다.
 
 ```markdown
-![Optimizer Comparison](images/optimizer_comparison.png)
 
-![Knowledge Distillation](images/knowledge_distillation.png)
 ```
 
 이미지 파일을 `images` 폴더에 넣고 파일명만 맞춰주면 된다.
@@ -916,3 +913,4 @@ $$
 * 빠른 실험 단계에서는 Adam이 유리하고, Weight Decay를 함께 고려할 때는 AdamW가 유용하다.
 * 모델 압축 기법에는 가지치기, 양자화, 지식 증류가 있다.
 * CAM은 CNN이 이미지의 어떤 부분에 주목했는지 시각화하는 방법이다.
+
